@@ -195,7 +195,13 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
 
-        /* Laravel-Shopping-cat-Package */
+        /*
+
+      Custom - Laravel-Shopping-cat-Package Provider from Darryldecode\Cart
+
+         */
+
+         Darryldecode\Cart\CartServiceProvider::class
 
     ],
 
@@ -212,6 +218,13 @@ return [
 
     'aliases' => Facade::defaultAliases()->merge([
         // 'ExampleClass' => App\Example\ExampleClass::class,
+
+          /*
+
+      Custom - Laravel-Shopping-cat-Package Aliase
+
+         */
+        'Cart' => Darryldecode\Cart\Facades\CartFacade::class
     ])->toArray(),
 
 ];
